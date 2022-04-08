@@ -1,7 +1,7 @@
 { pkgs }: {
 	deps = [
-        pkgs.ruby
-        pkgs.solargraph
-        pkgs.rufo
+    pkgs.ruby_3_1
+    pkgs.solargraph
+    pkgs.rufo
 	];
 }

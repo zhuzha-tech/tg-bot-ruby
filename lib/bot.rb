@@ -2,16 +2,18 @@ require "telegram/bot"
 require "aws-sdk-ec2"
 require "json"
 
-TOKEN = ENV[TELEGRAM_TOKEN]
+TOKEN = ENV['TELEGRAM_TOKEN']
+AWS_REGION = 'eu-central-1'
+INSTANCE_ID = 'i-06f46d854347c6a22'
 
 class MyBot
   def initialize
     file = File.read("lib/choose.json")
     choose = JSON.parse(file)
     logger = Logger.new(STDOUT, Logger::DEBUG, datetime_format: '%Y-%m-%d %H:%M:%S')
-    ec2_resource = Aws::EC2::Resource.new(region: 'eu-central-1')
+    ec2_resource = Aws::EC2::Resource.new(region: AWS_REGION)
 
-    Telegram::Bot::Client.run('5151976723:AAGy_SQtoE9hBgyqDVj07Z-uApQ_qfU-W6s', logger: logger) do |bot|
+    Telegram::Bot::Client.run(TOKEN, logger: logger) do |bot|
       bot.listen do |message|
         case message
         when Telegram::Bot::Types::CallbackQuery
@@ -26,7 +28,7 @@ class MyBot
         when Telegram::Bot::Types::Message
           case message.text
           when "/start"
-            question = "Привет, #{message.from.first_name} \u{1F91D}!\nНа какую тему ты хочешь посмотреть фильм?\nВыбирай ниже \u{1F447}"
+            question = "Hi, #{message.from.first_name} \u{1F91D}\u{1F447}!!!"
             buttons = [
               Telegram::Bot::Types::InlineKeyboardButton.new(text: "МЕДИЦИНА", callback_data: "medicine"),
               Telegram::Bot::Types::InlineKeyboardButton.new(text: "ВЗАИМООТНОШЕНИЯ", callback_data: "relationship"),
@@ -42,7 +44,7 @@ class MyBot
             bot.api.send_message(chat_id: message.chat.id, text: question, reply_markup: keyboard)
           when "/stop"
             kb = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-            bot.api.send_message(chat_id: message.chat.id, text: "Жаль, что ты уходишь \u{1F622}. \nМне казалось, нам было весело вместе... \nНадеюсь, ты скоро вернёшься, и я увижу тебя снова \u{1F618} . \nПока \u{1F60A}", reply_markup: kb)
+            bot.api.send_message(chat_id: message.chat.id, text: "Sad, that you leave \u{1F622}. \nI thought we were having fun... \nI hope you'll be back soon \u{1F618} . \nПока \u{1F60A}", reply_markup: kb)
           when "/status"
             response = ec2_resource.instances
             if response.count.zero?
@@ -55,7 +57,7 @@ class MyBot
               bot.api.send_message chat_id: message.chat.id, text: text
             end
           when "/toggle"
-            instance = ec2_resource.instance "i-06f46d854347c6a22"
+            instance = ec2_resource.instance INSTANCE_ID
             logger.info "Instance #{instance.id} is #{instance.state.name}."
             case instance.state.name
             when "running"
