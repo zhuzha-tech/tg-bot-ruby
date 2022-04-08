@@ -1,0 +1,175 @@
+{
+  "medicine": {
+    "title": "МЕДИЦИНА",
+    "options": [
+      {
+        "text": "\"Разум в огне\"",
+        "url": "https://www.kinopoisk.ru/film/848487/"
+      },
+      {
+        "text": "\"Тэмпл Грандин\"",
+        "url": "https://www.kinopoisk.ru/film/424153/"
+      },
+      {
+        "text": "\"Сотворившая чудо\"",
+        "url": "https://www.kinopoisk.ru/film/15111/"
+      },
+      {
+        "text": "\"Золотые руки\"",
+        "url": "https://www.kinopoisk.ru/film/427195/"
+      },
+      {
+        "text": "\"Не/смотря ни на что\"",
+        "url": "https://www.kinopoisk.ru/film/887535/"
+      },
+      {
+        "text": "\"Король говорит!\"",
+        "url": "https://www.kinopoisk.ru/film/485311/"
+      },
+      {
+        "text": "\"Творение Господне\"",
+        "url": "https://www.kinopoisk.ru/film/233084/"
+      }
+    ]
+  },
+
+  "relationship": {
+    "title": "ВЗАИМООТНОШЕНИЯ",
+    "options": [
+      {
+        "text": "\"Того\"",
+        "url": "https://www.kinopoisk.ru/film/1173444/"
+      },
+      {
+        "text": "\"Большие глаза\"",
+        "url": "https://www.kinopoisk.ru/film/573869/"
+      },
+      {
+        "text": "\"1+1\"",
+        "url": "https://www.kinopoisk.ru/film/535341/"
+      },
+      {
+        "text": "\"Лучшие враги\"",
+        "url": "https://www.kinopoisk.ru/film/920082/"
+      },
+      {
+        "text": "\"Осин\"",
+        "url": "https://www.kinopoisk.ru/film/720553/"
+      }
+    ]
+  },
+
+  "sport": {
+    "title": "СПОРТ",
+    "options": [
+      {
+        "text": "\"Шахматист\"",
+        "url": "https://www.kinopoisk.ru/film/914862/"
+      },
+      {
+        "text": "\"В погоне за ветром\"",
+        "url": "https://www.kinopoisk.ru/film/1100532/"
+      },
+      {
+        "text": "\"Голкипер\"",
+        "url": "https://www.kinopoisk.ru/film/1072836/"
+      },
+      {
+        "text": "\"Невидимая сторона\"",
+        "url": "https://www.kinopoisk.ru/film/450213/"
+      }
+    ]
+  },
+
+  "willpower": {
+    "title": "СИЛЬНЫЕ ДУХОМ",
+    "options": [
+      {
+        "text": "\"Проповедник с пулеметом\"",
+        "url": "https://www.kinopoisk.ru/film/497015/"
+      },
+      {
+        "text": "\"В погоне за счастьем\"",
+        "url": "https://www.kinopoisk.ru/film/104938/"
+      }
+    ]
+  },
+
+  "justice": {
+    "title": "ПРАВОСУДИЕ",
+    "options": [
+      {
+        "text": "\"Невиновный\"",
+        "url": "https://www.kinopoisk.ru/film/450623/"
+      }
+    ]
+  },
+
+  "psychology": {
+    "title": "ПСИХОЛОГИЯ,ФИЛОСОФИЯ",
+    "options": [
+      {
+        "text": "\"Сибил\"",
+        "url": "https://www.kinopoisk.ru/series/278060/"
+      },
+      {
+        "text": "\"Опасный метод\"",
+        "url": "https://www.kinopoisk.ru/film/493194/"
+      },
+      {
+        "text": "\"Игры разума\"",
+        "url": "https://www.kinopoisk.ru/film/530/"
+      }
+    ]
+  },
+
+  "war": {
+    "title": "ВОЙНА",
+    "options": [
+      {
+        "text": "\"Лётчица Гунджан Саксена\"",
+        "url": "https://www.kinopoisk.ru/film/1264749/"
+      },
+      {
+        "text": "\"Айла: Дочь войны\"",
+        "url": "https://www.kinopoisk.ru/film/1032522/"
+      },
+      {
+        "text": "\"Пианист\"",
+        "url": "https://www.kinopoisk.ru/film/355/"
+      },
+      {
+        "text": "\"Список Шиндлера\"",
+        "url": "https://www.kinopoisk.ru/film/329/"
+      }
+    ]
+  },
+
+  "science": {
+    "title": "НАУКА",
+    "options": [
+      {
+        "text": "\"Игры разумов\"",
+        "url": "https://www.kinopoisk.ru/film/996027/"
+      }
+    ]
+  },
+
+  "for_the_soul": {
+    "title": "ДЛЯ ДУШИ(не на реальных событиях)",
+    "options": [
+      {
+        "text": "\"Жизнь прекрасна\"",
+        "url": "https://www.kinopoisk.ru/film/381/"
+      },
+      {
+        "text": "\"Пиджак\"",
+        "url": "https://www.kinopoisk.ru/film/47382/"
+      },
+      {
+        "text": "\"Звездочки на земле\"",
+        "url": "https://www.kinopoisk.ru/film/280562/"
+      }
+    ]
+  }
+}
