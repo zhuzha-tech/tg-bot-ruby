@@ -1,9 +1,10 @@
 run = ["bundle", "exec", "ruby", "main.rb"]
-
 entrypoint = "main.rb"
+onBoot = "nix-channel --update"
 
 [packager]
 language = "ruby"
+afterInstall = "ruby --version > ruby_version"
 
 [packager.features]
 packageSearch = true

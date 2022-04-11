@@ -67,6 +67,7 @@ GEM
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -77,6 +78,7 @@ DEPENDENCIES
   net-http-persistent
   nokogiri
   telegram-bot-ruby
+  webrick
 
 BUNDLED WITH
-   2.1.4
+   2.3.7
