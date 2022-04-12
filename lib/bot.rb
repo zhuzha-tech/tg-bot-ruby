@@ -53,6 +53,10 @@ class MyBot
               text = ""
               response.each do |instance|
                 text += "\n#{instance.id} - #{instance.state.name} - #{instance.tags[0].value}"
+                unless instance.public_ip_address.nil?
+                  text += " - #{instance.public_ip_address}"
+                end
+                text += "\n"
               end
               bot.api.send_message chat_id: message.chat.id, text: text
             end
@@ -67,7 +71,7 @@ class MyBot
               instance.start
               instance.wait_until_running max_attempts: 10, delay: 5
             end
-            bot.api.send_message chat_id: message.from.id, text: "Instance #{instance.id} is #{instance.state.name}"
+            bot.api.send_message chat_id: message.from.id, text: "Instance #{instance.id} is #{instance.state_transition_reason}/#{instance.state_reason}"
           when "/write_me"
             kb = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
             bot.api.send_message chat_id: message.chat.id, text: "Okay \u{1F60A}", reply_markup: kb
